@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95e0218bad.js" crossorigin="anonymous"></script>
+    <title>เกมส์ PC</title>
+</head>
+<body>
+    <header>
+        
+        <div class="navbar">
+            <div class="logo"><a href="">TNNGAME♥</a></div>
+            <ul class="links">
+                <li><a href="Index.html" >หน้าหลัก</a></li>
+                <li><a href="About.html">เกี่ยวกับ</a></li>
+                <li><a href="Competition.html">การแข่งขัน</a></li>
+                <li><a href="Gameinfo.html"  >ข้อมูลเกม</a></li>
+                <li><a href="Contact.html">ติดต่อ</a></li>
+                
+            </ul>
+            <li><a href="Donate.html" class="action-btn">สนับสนุน</a></li>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#">หน้าหลัก</a></li>
+                <li><a href="#">เกี่ยวกับ</a></li>
+                <li><a href="#">การแข่งขัน</a></li>
+                <li><a href="#">ข้อมูลเกม</a></li>
+                <li><a href="#">ติดต่อ</a></li>
+                <li><a href="#" class="action-btn">สนับสนุน</a></li>
+            </div>
+        </div>
+        
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+            toggleBtn.onclick = function(){
+              
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+    
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+            
+        </script>
+    </header>
+    <div class="head"><h2>เลือกหมวดหมู่เกม</h2></div>
+    <div class="select-container">
+        <a class="select-item" id="FPS" href="PC/FPS.html">
+           
+            <p>FPS</p>
+        </a>
+        <a class="select-item" id="MOBA" href="PC/MOBA.html">
+        
+            <p>MOBA</p>
+        </a>
+        <a class="select-item" id="RTS" href="PC/RTS.html">
+         
+            <p>RTS</p>
+        </a>
+        <a class="select-item" id="RPG" href="PC/RPG.html">
+    
+            <p>RPG</p>
+        </a>
+        <a class="select-item" id="Survival" href="PC/Survival.html">
+   
+            <p>Survival</p>
+        </a>
+        <a class="select-item" id="Sport" href="PC/Sport.html">
+        
+            <p>Sport</p>
+        </a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,534 @@
+*{
+    margin: 0;;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url(Fonts/Anantason\ Regular.ttf);
+}
+body{
+    height: 100vh;
+    font-family: MyFont;
+    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 2),rgba(0, 0, 0, 0.9)), url(Image/E6v0BazXIAshpld.jpg);
+    color:orange;
+    background-size:cover;
+    background-position: center center;
+    background-position: 0;
+    background-attachment: fixed;
+    
+}
+
+
+.head h2{
+    text-align: center;
+    color:Goldenrod;
+    font-weight: bold;
+   
+}
+
+.container .head h2{
+    padding-bottom: 2rem;
+    
+}
+
+
+div.container{
+    margin: 0 9rem;
+    max-width: 60%;
+    padding: 5rem 3rem;
+    margin:auto;
+    overflow: hidden;
+    margin-top: 5vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.container p{
+    font-size: 1.1rem;
+}
+
+div.box{
+    display:flex;
+    gap:3rem;
+    padding:1rem;
+}
+div.box img{
+    height:max-content;
+    max-width: 30%;
+    aspect-ratio: 9/13;
+    object-fit: cover;
+   
+  
+   
+    
+}
+
+p{
+    line-height:  1.5rem;
+    color:greenyellow;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+   
+    font-size:1em;
+    text-decoration: none;
+    color: Goldenrod;
+    font-size:1rem;
+}
+a.disabled{
+    pointer-events: none;
+    cursor:default;
+    color:green;
+}
+a:hover{
+    color:green;
+}
+
+header{
+    position:relative;
+ 
+  
+   
+    
+}
+
+
+
+
+.navbar {
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    backdrop-filter: blur(10px);
+  }
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight:bold;
+    justify-content: end;
+   
+}
+
+.navbar .links{
+    
+    display:flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color:#fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+}
+.action-btn{
+    background-color: green;
+    color:white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size:0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.5s ease;
+    
+}
+
+.action-btn:hover{
+    scale: 1.05;
+    color:#fff;
+}
+
+.action-btn:active {
+    scale:0.95;
+}
+/*Dropdown*/
+.dropdown_menu{
+    position:absolute;
+    right:2rem;
+    top:60px;
+    width:300px;
+    height:0;
+    background:rgba(0, 0, 0, 0.1);
+    backdrop-filter:blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+   height:336px;
+   .action-btn{
+    display:flex;
+   }
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.dropdown_menu .action-btn{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 992px){
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+    
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+    .container.div{
+        max-width: 100%;
+        
+    }
+}
+
+
+img.topimg{
+    object-fit: cover;
+    width:100%;
+    margin: 1.5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*for Home*/
+.select-container {
+    padding-top:10px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+  .select-container#Platform {
+    padding-top:10px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .select-item {
+    flex: 0 0 9%; /* Adjust the default width */
+    height: 80vh; /* Three times the default height */
+   
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.5s ease-in-out;
+    transform: skew(-5deg); 
+    
+  }
+ 
+ 
+  
+  .select-item:hover {
+    flex: 1;
+ 
+  }
+  
+  .select-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Stretch image to fill the container */
+  }
+  
+  .select-item p {
+    position: absolute;
+    bottom: 0; /* Align text to the bottom */
+    width: 100%;
+    padding: 10px; /* Add padding to the text */
+    box-sizing: border-box;
+    color: goldenrod; /* Adjust text color */
+    font-size: 1.6rem; /* Adjust text size */
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #Mobile,
+  #PC {
+      flex: 0 0 20%;
+      height: 75vh;
+      position: relative;
+      overflow: hidden;
+      transition: flex 0.5s ease-in-out;
+      transform: skew(-5deg);
+  }
+  
+  #Mobile:hover,
+  #PC:hover {
+      flex: 1;
+  }
+  
+  #Mobile img,
+  #PC img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+  }
+  
+  #Mobile p,
+  #PC p {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      color: goldenrod;
+      font-size: 1.6rem;
+      -webkit-text-stroke-color: black;
+      -webkit-text-stroke-width: 0.25px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+  }
+  
+  #Mobile::before,
+  #PC::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+      transform: skewY(-5deg);
+      transform-origin: bottom center;
+      z-index: -1;
+  }
+
+
+  
+  #FPS1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/codmb2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    
+  }
+  #MOBA1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/rov2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #RTS1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/coc.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #RPG1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/GS.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Survival1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/ITD2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Sport1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/A8.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Mobile1{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/Mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #FPS{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/CS2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    
+  }
+  #MOBA{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/LOL.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #RTS{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/RTS.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #RPG{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/Cyber.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Survival{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/Minecraft.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Sport{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/Fifa.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #Mobile{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/Mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #PC{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(Image/PC.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+ 
+
+  /*slider*/
+
+  body {
+	background-color: #f8fafc;
+}
+
+.container {
+	padding: 2rem;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+    
+    
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+   
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.box-cell{
+    display:flex;
+ 
+}
+.box-cell-item{
+    flex: 1; /* Each item takes an equal fraction of available space */
+    padding: 20px;
+   
+    box-sizing: border-box; 
+    
+}
+.box-cell-item img{
+    max-width: 100%;
+    aspect-ratio: 16/10;
+}
+.box-cell-item h4{
+    
+}
+.box-cell-item:hover{
+    color:green;
+    cursor:pointer;
+}
+  
+.pt-1{
+    padding-top:1rem;
+}
+  /* Add background images for other items as needed */

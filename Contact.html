@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95e0218bad.js" crossorigin="anonymous"></script>
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        
+        <div class="navbar">
+            <div class="logo"><a href="">TNNGAME♥</a></div>
+            <ul class="links">
+                <li><a href="Index.html" >หน้าหลัก</a></li>
+                <li><a href="About.html"  >เกี่ยวกับ</a></li>
+                <li><a href="Competition.html">การแข่งขัน</a></li>
+                <li><a href="Gameinfo.html" >ข้อมูลเกม</a></li>
+                <li><a href="Contact.html" class="disabled">ติดต่อ</a></li>
+                
+            </ul>
+            <li><a href="Donate.html" class="action-btn">สนับสนุน</a></li>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#">หน้าหลัก</a></li>
+                <li><a href="#">เกี่ยวกับ</a></li>
+                <li><a href="#">การแข่งขัน</a></li>
+                <li><a href="#">ข้อมูลเกม</a></li>
+                <li><a href="#">ติดต่อ</a></li>
+                <li><a href="#" class="action-btn">สนับสนุน</a></li>
+            </div>
+        </div>
+        
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+            toggleBtn.onclick = function(){
+              
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+    
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+            
+        </script>
+    </header>
+    <div class="container">
+        <div class="head">
+            <h2>ติดต่อผู้พัฒนา</h2>
+            <div style="text-align: center;">
+            <img src="image/AKP.jpg" alt="" width="350" height="400" >
+            <p>นาย เอกพันธ์ ทศทิศรังสรรค์
+            <p>Facebook : <a target="_blank" href="https://www.facebook.com/tienol">Akkapan Tosathisrangsan </a>
+            <p>Line : Misstertee 
+            <p>Instagram : <a target="_blank" href="https://www.instagram.com/tee.akp/">Tee.akp </a>
+            <p>Phone : 0931491440   
+        </div>
+        
+        <div style="text-align: center;">
+            <img src="image/MT.jpg" alt="" width="350" height="400">
+            <p>Facebook : <a target="_blank" href="https://www.facebook.com/metee.sepinta.1">Metee Sepinta  </a>
+            <p>Line : name270945
+            <p>Instagram : <a target="_blank" href="https://www.instagram.com/jow_name/">jow_name</a>
+            <p>Phone : 0826368287
+        </div>
+        <div style="text-align: center;">
+            <img src="image/NON2.jpg" alt="" width="350" height="400">
+            <p>Facebook : <a target="_blank" href="https://www.facebook.com/chanon.narawot">Nathaphab Saila   </a>
+            <p>Line : 0965702793
+            <p>Instagram : <a target="_blank" href="https://www.instagram.com/_noneiei/">_noneiei</a>
+            <p>Phone : 0965702793
+        </div>
+    </div>
+</div>
+</body>
+</html>
